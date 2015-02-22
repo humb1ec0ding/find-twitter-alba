@@ -25,7 +25,6 @@ client = UserClient(CONSUMER_KEY,
 
 ### [Feb,22] 프로필 사진, id, 이름, 계정 생성 시간
 
-`2015.02.22` 확인 결과 동작하는 `twitter` 계정들.
 ![](http://pbs.twimg.com/profile_images/566790281496784897/RlS2Veg4_normal.jpeg)        ohademayochuchu 돌아온 미숙이   Thu Dec 04 05:57:22 +0000 2014 <br>
 ![](http://pbs.twimg.com/profile_images/2604817910/r_normal.jpg)        shinytart       이지영  Thu Sep 13 06:55:06 +0000 2012 <br>
 ![](http://pbs.twimg.com/profile_images/2604826784/s_normal.jpg)        tiny_farm1      eunlin  Thu Sep 13 07:07:32 +0000 2012 <br>
