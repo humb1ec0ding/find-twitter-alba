@@ -68,7 +68,7 @@ resource = client.api.users.show
 for user in users:
     response = resource.get(screen_name=user)
     r = response.data
-    print "![](%s)\t%s\t%s\t%s" % (r.profile_image_url, r.screen_name, r.name, r.created_at)
+    print "![](%s)\t[%s](https://twitter.com/%s)\t%s\t%s <br>" % (r.profile_image_url, r.screen_name, r.screen_name, r.name, r.created_at)
 #    print "\t%s" % r.screen_name
 #    print "\t%s" % r.name
 #    print "\t%s" % r.created_at
