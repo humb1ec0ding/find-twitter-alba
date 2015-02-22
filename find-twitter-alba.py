@@ -1,25 +1,14 @@
-# find-twitter-alba
-find-twitter-alba
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
 
-![](https://raw.githubusercontent.com/humb1ec0ding/humb1ec0ding-etc/master/2015/02/twitter-alba.png)
+from birdy.twitter import UserClient
 
-그들은 누굴까 ? 
+# Create Twitter Apps : https://apps.twitter.com/
+client = UserClient(CONSUMER_KEY,
+                    CONSUMER_SECRET,
+                    ACCESS_TOKEN,
+                    ACCESS_TOKEN_SECRET)
 
-Twitter **Python** Client 연습할 겸으로 API 몇 개 써보자... :)
-
-
-## Requirement
-
-`birdy` is a super awesome Twitter API client for Python in just a little under 400 LOC.
-
-[birdy](https://github.com/inueni/birdy)
-
-
-## Starting point
-
-`2015.02.22` 확인 결과 동작하는 `twitter` 계정들.
-
-```python
 users = [
     'ohademayochuchu',
     'shinytart',
@@ -70,5 +59,17 @@ users = [
     'sole_heart1129',
     'im_whitecolor'
 ]
-```
 
+#response = client.api.users.show.get(screen_name=user)
+#print response.data
+
+resource = client.api.users.show
+
+for user in users:
+    print "[+] %s" % user
+    response = resource.get(screen_name=user)
+    r = response.data
+    print "\t%s" % r.screen_name
+    print "\t%s" % r.name
+    print "\t%s" % r.created_at
+    print "\tprofile_image_url\t= %s" % r.profile_image_url
