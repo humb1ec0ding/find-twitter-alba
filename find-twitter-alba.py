@@ -66,10 +66,10 @@ users = [
 resource = client.api.users.show
 
 for user in users:
-    print "[+] %s" % user
     response = resource.get(screen_name=user)
     r = response.data
-    print "\t%s" % r.screen_name
-    print "\t%s" % r.name
-    print "\t%s" % r.created_at
-    print "\tprofile_image_url\t= %s" % r.profile_image_url
+    print "![](%s)\t%s\t%s\t%s" % (r.profile_image_url, r.screen_name, r.name, r.created_at)
+#    print "\t%s" % r.screen_name
+#    print "\t%s" % r.name
+#    print "\t%s" % r.created_at
+#    print "\tprofile_image_url\t= %s" % r.profile_image_url
